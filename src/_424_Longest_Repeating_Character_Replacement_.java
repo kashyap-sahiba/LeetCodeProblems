@@ -1,5 +1,5 @@
 public class _424_Longest_Repeating_Character_Replacement_ {
-    public int characterReplacement(String s, int k){
+    public static int characterReplacement(String s, int k){
         int[] charCount = new int[26];
         int result = 0;
         int max = 0;
@@ -16,5 +16,27 @@ public class _424_Longest_Repeating_Character_Replacement_ {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        /*
+        * Input: s = "AABABBA", k = 1
+Output: 4
+Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+The substring "BBBB" has the longest repeating letters, which is 4.
+There may exists other ways to achieve this answer too.
+        * */
+
+
+        String s = "AABABBA";
+        int k =1;
+        int answer = 4;
+        int result = characterReplacement(s,k);
+
+        if(result==answer){
+            System.out.println("Test Case Passed");
+        }else{
+            System.out.println("Failed!!");
+        }
     }
 }
